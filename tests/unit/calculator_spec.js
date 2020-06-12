@@ -55,4 +55,14 @@ describe('calculator', function () {
     assert.equal(3, calculator.runningTotal);
   });
 
+  it('it can clear the running total without affecting the calculation', function() {
+    calculator.numberClick(1);
+    calculator.operatorClick('+');
+    calculator.numberClick(2);
+    calculator.clearClick();
+    calculator.numberClick(3)
+    calculator.operatorClick('=');
+    assert.equal(4, calculator.runningTotal)
+  });
+
 });
