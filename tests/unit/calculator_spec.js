@@ -32,6 +32,13 @@ describe('calculator', function () {
     calculator.previousTotal = 3;
     calculator.multiply(5);
     assert.equal(15, calculator.runningTotal);
-  })
+  });
+
+  it('it can divide numbers', function() {
+    // Same as before but for dividing numbers
+    calculator.previousTotal = 21;
+    calculator.divide(7);
+    assert.equal(3, calculator.runningTotal);
+  });
 
 });
