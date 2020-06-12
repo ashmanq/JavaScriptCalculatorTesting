@@ -41,4 +41,10 @@ describe('calculator', function () {
     assert.equal(3, calculator.runningTotal);
   });
 
+  it('it can concatenate numbers', function() {
+    calculator.numberClick(1);
+    calculator.numberClick(2);
+    assert.equal(12, calculator.runningTotal);
+  });
+
 });
