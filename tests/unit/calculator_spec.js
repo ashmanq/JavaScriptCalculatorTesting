@@ -24,7 +24,14 @@ describe('calculator', function () {
     // total shows the subtracted result
     calculator.previousTotal = 7;
     calculator.subtract(4);
-    assert.equal(3, calculator.runningTotal)
+    assert.equal(3, calculator.runningTotal);
   });
+
+  it('it can multiply numbers', function() {
+    // Same as before but for multiplying numbers
+    calculator.previousTotal = 3;
+    calculator.multiply(5);
+    assert.equal(15, calculator.runningTotal);
+  })
 
 });
